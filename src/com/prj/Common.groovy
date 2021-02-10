@@ -19,6 +19,8 @@ def runPipeline() {
     }
 }
 
+return this
+
 
 // def call(String name = 'human') {
 //     echo "Hello, ${name}."

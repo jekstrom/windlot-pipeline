@@ -8,3 +8,5 @@ def build(pipelineVars) {
 def test() {
 
 }
+
+return this
