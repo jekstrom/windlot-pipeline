@@ -17,7 +17,7 @@ def runPipeline(build) {
 
             pipelineVars.buildArgs = readYaml file: "build.yaml"
 
-            env.NODEJS_HOME = "${tool 'Node 15.8.0'}"
+            env.NODEJS_HOME = "${tool 'nodejs'}"
             // on linux / mac
             env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
             sh 'npm --version'
