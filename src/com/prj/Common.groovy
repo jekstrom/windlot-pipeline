@@ -11,8 +11,10 @@ def runPipeline(build) {
     pipelineVars.isMaster = true
 
 
-    node("master") {
+    node {
         stage('PreBuild') {
+            checkout scm
+            
             pipelineVars.buildArgs = readYaml file: "build.yaml"
         }
 
