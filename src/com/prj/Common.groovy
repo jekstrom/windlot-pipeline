@@ -1,5 +1,7 @@
 package com.prj
 
+import org.yaml.snakeyaml.Yaml
+
 def runPipeline(build) {
     def reactJs = new com.prj.ReactjsBuild()
     def pipelineVars = [:]
