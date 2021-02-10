@@ -9,7 +9,7 @@ def runPipeline(build) {
     pipelineVars.isMaster = true
 
 
-    node("master") {
+    node {
         stage('PreBuild') {
             pipelineVars.buildArgs = readYaml file: "build.yaml"
         }
