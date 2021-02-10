@@ -14,8 +14,13 @@ def runPipeline(build) {
     node {
         stage('PreBuild') {
             checkout scm
-            
+
             pipelineVars.buildArgs = readYaml file: "build.yaml"
+
+            env.NODEJS_HOME = "${tool 'Node 15.8.0'}"
+            // on linux / mac
+            env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+            sh 'npm --version'
         }
 
         stage('Build') {
