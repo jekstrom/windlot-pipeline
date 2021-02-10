@@ -1,7 +1,7 @@
-package com.prj
+package vars
 
 def runPipeline() {
-    def reactJs = new com.prj.ReactjsBuild()
+    def reactJs = new vars.ReactjsBuild()
 
     // TODO set based on branch name
     pipelineVars.isFeature = false
