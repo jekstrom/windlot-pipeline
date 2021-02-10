@@ -1,4 +1,4 @@
-package vars
+package com.prj
 
 def build(pipelineVars) {
     echo "Running ${pipelineVars.buildArgs}"
