@@ -10,7 +10,7 @@ def runPipeline() {
 
     node(any) {
         stage('PreBuild') {
-            pipelineVars.buildArgs = readYaml text: file: "build.yaml"
+            pipelineVars.buildArgs = readYaml file: "build.yaml"
         }
 
         stage('Build') {
