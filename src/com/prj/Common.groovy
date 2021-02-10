@@ -6,7 +6,7 @@ def runPipeline(build) {
 
     // TODO set based on branch name
     pipelineVars.isFeature = false
-    pipelinVars.isMaster = true
+    pipelineVars.isMaster = true
 
 
     node(any) {
