@@ -2,8 +2,9 @@ package com.prj
 
 def build(pipelineVars) {
     echo "Running ${pipelineVars.buildArgs}"
-    sh "cd ${pipelineVars.buildArgs.reactjs.name}"
-    sh 'npm run-script build'
+    dir("${pipelineVars.buildArgs.reactjs.name}") {
+        sh 'npm run-script build'
+    }
 }
 
 def test() {
