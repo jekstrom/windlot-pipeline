@@ -1,6 +1,6 @@
 package com.prj
 
-def runPipeline() {
+def runPipeline(build) {
     def reactJs = new com.prj.ReactjsBuild()
 
     // TODO set based on branch name
